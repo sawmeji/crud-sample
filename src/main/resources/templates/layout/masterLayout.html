@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html th:fragment="layout(main)" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../static/bootstrap/css/app.css" th:href="@{/bootstrap/css/app.css}">
+    <link rel="stylesheet" href="../../static/bootstrap/css/bootstrap.min.css"
+          th:href="@{/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark text-light">
+    <a href="#" class="navbar-brand"><span><i class="fas fa-paw mr-2"></i>Home</span></a>
+    <button class="nabvar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="myNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a href="" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a th:href="@{/product}" class="nav-link">ProductForm</a>
+            </li>
+            <li class="nav-item active">
+                <a th:href="@{/list-products}" class="nav-link">Product List</a>
+            </li>
+            <li class="nav-item active">
+                <a href="" class="nav-link">About</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div th:replace="${main}"></div>
+
+<div id="content">
+
+</div>
+
+<footer class="mt-5 py-5 bg-info text-white justify-content-center align-items-center">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-6 offset-md-5">
+                <p class="lead">CopyRight &copy; 2023 by JDC</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+</body>
+</html>

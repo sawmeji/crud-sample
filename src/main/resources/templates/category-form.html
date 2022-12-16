@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{layout/masterLayout :: layout(~{::main})}"
+      xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <div class="card shadow-sm">
+          <div class="card-header">
+            <h3>CategoryForm</h3>
+          </div>
+          <div class="card-body">
+            <div th:replace="fragments/category-form.html :: categoryForm"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

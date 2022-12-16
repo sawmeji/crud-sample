@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<form th:fragment="categoryForm" action="#" th:action="@{/category}" th:object="${category}" method="post">
+
+  <div class="form-group">
+    <label for="name">Category Name</label>
+    <input type="text" th:field="*{name}" id="name" class="form-control">
+  </div>
+  <input type="submit" value="Save" class="btn btn-info btn-block btn-lg mb-5">
+</form>
+</body>
+</html>
