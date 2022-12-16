@@ -7,12 +7,14 @@
   <tr>
     <th>Id</th>
     <th>Name</th>
+    <th>Action</th>
   </tr>
   </thead>
   <tbody>
   <tr th:each="cat:${categories}">
     <th th:text="${cat.id}"></th>
     <th th:text="${cat.name}"></th>
+    <th><a th:href="@{'/category/delete?id='+${cat.id}}" class="btn btn-outline-danger">Delete</a></th>
   </tr>
   </tbody>
 </table>
